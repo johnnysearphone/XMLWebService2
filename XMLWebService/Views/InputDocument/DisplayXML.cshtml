@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "DisplayXML";
+}
+@using XMLWebService.Models;
+@model List<XMLWebService.Models.InputDocumentModel>
+    
+<h2>DisplayXML</h2>
+<table class="table-responsive table-bordered">
+        <thead style="background-color:Highlight">
+            <tr>
+                <th>Command</th>
+                <th>SiteID</th>
+            </tr>
+                
+        </thead>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.declarationCommand</td>
+                <td>@item.siteID</td>
+            </tr>
+        }
+</table>
